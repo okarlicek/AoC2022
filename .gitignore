@@ -1,6 +1,11 @@
-.vs/
-x64/
-*.sln
-*.vcxproj
-*.vcxproj.user
-*.vcxproj.filters
+.vs
+x64
+obj
+a.out
+bin
+*.user
+Debug
+Release
+*.idb
+*.pdb
+*.txt
