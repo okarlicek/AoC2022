@@ -83,7 +83,7 @@ int Game::evaluate_part_two() const {
 	return score;
 }
 
-bool load_data(const std::string& filename, std::vector<Game>& games, int part = 0);
+bool load_data(const std::string& filename, std::vector<Game>& games);
 bool load_data(std::ifstream& is, std::vector<Game>& games);
 
 int main(int argc, char** argv) {
@@ -103,7 +103,7 @@ int main(int argc, char** argv) {
 
 }
 
-bool load_data(const std::string& filename, std::vector<Game>& games, int part) {
+bool load_data(const std::string& filename, std::vector<Game>& games) {
 	std::ifstream fs;
 	fs.open(filename);
 	if (!fs.good()) {
