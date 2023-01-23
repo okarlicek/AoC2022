@@ -105,7 +105,9 @@ bool load_data(std::string& filename, std::vector<Rucksack>& data) {
 	if (!fs.good()) {
 		return false;
 	}
-	return load_data(fs, data);
+	bool success = load_data(fs, games);
+	fs.close();
+	return success;
 }
 
 bool load_data(std::ifstream& file, std::vector<Rucksack>& data) {

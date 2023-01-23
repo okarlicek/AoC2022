@@ -65,7 +65,9 @@ bool load_data(const std::string& filename, std::vector<int>& elves) {
 	if (!fs.good()) {
 		return false;
 	}
-	return load_data(fs, elves); // processing ifstream
+	bool success load_data(fs, elves);
+	fs.close();
+	return  success; // processing ifstream
 }
 
 
@@ -83,5 +85,6 @@ bool load_data(std::ifstream& is, std::vector<int>& elves) {
 		int calorie = std::stoi(line); // parsing number
 		sum_calories += calorie;
 	}
+
 	return true;
 }

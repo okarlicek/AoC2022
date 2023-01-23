@@ -109,7 +109,9 @@ bool load_data(const std::string& filename, std::vector<Game>& games) {
 	if (!fs.good()) {
 		return false;
 	}
-	return load_data(fs, games);
+	bool success = load_data(fs, games);
+	fs.close();
+	return success;
 }
 
 bool load_data(std::ifstream& is, std::vector<Game>& games) {

@@ -45,6 +45,7 @@ bool process_file(std::string filename, int& score_contains, int& score_overlaps
 		score_contains += check_intervals_contains(start1, last1, start2, last2);
 		score_overlaps += check_intervals_overlapped(start1, last1, start2, last2);
 	}
+	fs.close();
 	return true;
 }
 
