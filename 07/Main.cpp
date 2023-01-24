@@ -68,6 +68,7 @@ int main(int argc, char** argv) {
 			process_output(line, current_folder_ptr);
 		}
 	}
+	fs.close();
 
 	int sum_size = 0;
 	int total_size = root.evaluate(sum_size);
