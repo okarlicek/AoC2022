@@ -4,7 +4,7 @@
 #include <vector>
 #include <queue>
 #include <memory>
-#include <algorithm>
+
 
 enum TypeSignal {Int, List};
 
@@ -159,6 +159,7 @@ bool process_file(std::string& filename, std::vector<std::unique_ptr<SignalList>
 		left.push_back(std::move(l));
 		right.push_back(std::move(r));
 	}
+	fs.close();
 	return true;
 
 }
